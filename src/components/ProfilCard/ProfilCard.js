@@ -13,12 +13,17 @@ class ProfilCard extends React.Component{
     );
   }
 
+  changePage = (type) => {
+    this.props.onChangePage(type);
+    // this.setState({ currentPage: type });
+  }
+
   renderFrequency(){
     return(
       <div className="frequency ps-3 pe-3 pb-1 pt-1">
-        <p>Daily</p>
-        <p>Weekly</p>
-        <p>Monthly</p>
+        <p onClick={()=> this.changePage("Daily")}>Daily</p>
+        <p onClick={()=> this.changePage("Weekly")}>Weekly</p>
+        <p onClick={()=> this.changePage("Monthly")}>Monthly</p>
       </div>
     );
   }
