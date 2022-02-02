@@ -1,6 +1,6 @@
 import React from 'react';
 import './CategoryCard.sass';
-import icon from "../../images/icon-work.svg"
+// import icon from "../../images/icon-work.svg"
 
 class CategoryCard extends React.Component{
   renderTitle(){
@@ -32,7 +32,7 @@ class CategoryCard extends React.Component{
     return(
       <div className='col-4 categoryCard'>
         <div className="banner">
-          <img src={icon} className='img-fluid' alt="category icon" />
+          <img src={this.props.icon} className='img-fluid' alt="category icon" />
         </div>
         <div className='content p-3 pb-1'>
           {this.renderTitle()}
